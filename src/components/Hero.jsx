@@ -1,6 +1,7 @@
 import React from "react";
-import "./Hero.css"; 
+import "./Hero.css";
 import { HiLocationMarker } from "react-icons/hi";
+import CountUp from "react-countup";
 const Hero = () => {
   return (
     <search className="hero-wrapper">
@@ -10,16 +11,45 @@ const Hero = () => {
             <div className="orange-cicle"></div>
             <h1>
               {" "}
-              Discocerr <br /> Most Suitable <br /> Property
+              Discocer <br /> Most Suitable <br /> Property
             </h1>
           </div>
           <div className="flexColStart hero-des">
-            <span>Find a variety of prperties that suit you very easilty</span>
-            <span>Find a variety of prperties that suit you very easilty</span>
+            <span className="secondaryText">
+              Find a variety of prperties that suit you very easilty
+            </span>
+            <span className="secondaryText">
+              Find a variety of prperties that suit you very easilty
+            </span>
           </div>
-        </div>
-        <div className="search-bar">
-            <HiLocationMarker color="var(--blue)" size={25}/>
+          <div className="flexCenter search-bar">
+            <HiLocationMarker color="var(--blue)" size={25} />
+            <input type="text" />
+            <button className="button">Search</button>
+          </div>
+          <div className="flexCenter stats">
+            <div className="flexColStart stat">
+              <span>
+                <CountUp start={8800} end={9000} duration={4} />
+                <span>+</span>
+              </span>
+              <span className="secondaryText"> Happy Customers</span>
+            </div>
+            <div className="flexColStart stat">
+              <span>
+                <CountUp end={2000} />
+                <span>+</span>
+              </span>
+              <span className="secondaryText">Award Winning</span>
+            </div>
+            <div className="flexColStart stat">
+              <span>
+                <CountUp end={28} />
+                <span>+</span>
+              </span>
+              <span className="secondaryText">Award Winning</span>
+            </div>
+          </div>
         </div>
         <div className="flexCenter hero-right">
           <div className="image-container">
